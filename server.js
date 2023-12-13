@@ -35,6 +35,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 // Routes
+app.get('/', (req, res) => {
+    res.send('Hi');
+})
 app.use('/user', router);
 
 app.use(errorHandler);
